@@ -34,7 +34,7 @@
             nemo
             eius necessitatibus ratione quae modi libero amet, voluptatem voluptate eligendi assumenda reprehenderit
             dicta molestiae dolorum?</p>
-        <div class="footer">
+        <div class="card-footer">
             <div class="actionbar">
                 <a href="">Action 1</a>
                 <a href="">Action 2</a>
@@ -49,6 +49,13 @@
             </div>
         </div>
     </section>
+    <div class="footer">
+        <p>
+            hecho con <img
+                src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/d8c24ca8f23c562a5600876ca2a550ce.png"
+                alt="heart"> por <a href="https://github.com/matzu14" target="_blank">matzu14</a>
+        </p>
+    </div>
 </body>
 
 </html>
@@ -63,13 +70,15 @@
     }
 
     body {
-        background: linear-gradient(0deg, rgb(77,44,98) 10%, rgb(246,59,153) 90%);
+        background: linear-gradient(0deg, rgb(77, 44, 98) 10%, rgb(246, 59, 153) 90%);
         min-height: 100vh;
         max-height: fit-content;
+        display: grid;
+        place-items: center;
     }
 
     .container {
-        margin: 20px;
+        display: grid;
         width: 500px;
         box-sizing: content-box;
         border-radius: 4px;
@@ -123,13 +132,13 @@
         object-position: top;
     }
 
-    .footer {
+    .card-footer {
         display: flex;
         justify-content: space-between;
     }
 
     .container>p {
-        margin: 0 20px 20px 20px;
+        margin: 5px 20px 20px 20px;
     }
 
     .actionbar {
@@ -137,14 +146,23 @@
     }
 
     .icons {
-        display: flex;
         padding: 0 13px 13px;
     }
 
     a {
         text-decoration: none;
         font-weight: bold;
-        color: #ffffff
+        color: #f63b99
+    }
+    .footer {
+        display: grid;
+        place-items: center;
+        align-self: flex-end;
+        width: 100%;
+        color: white;
+    }
+    .footer img {
+        height: 20px;
     }
 </style>
 <script>
