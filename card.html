@@ -27,6 +27,7 @@
         <div class="content">
             <div class="contentInner">
                 <img src="https://static1.e621.net/data/ca/9c/ca9c19994fd03f9f5eb46b6f2a0701b5.png" alt="">
+                <figcaption>Toriel by <a href="https://twitter.com/The_Invad3r" target="_blank">Ash</a></figcaption>
             </div>
         </div>
 
@@ -58,8 +59,9 @@
     </div>
     <div class="fab">
         <a href="index.html"><svg style="width:40px;height:40px" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M15.4,16.6L10.8,12L15.4,7.4L14,6L8,12L14,18L15.4,16.6Z" />
-        </svg></a>
+                <path fill="currentColor"
+                    d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M15.4,16.6L10.8,12L15.4,7.4L14,6L8,12L14,18L15.4,16.6Z" />
+            </svg></a>
     </div>
 </body>
 
@@ -130,6 +132,13 @@
         width: fit-content;
     }
 
+    .contentInner figcaption,
+    a {
+        place-self: center;
+        text-decoration: none;
+        color: #f63b99;
+    }
+
     .content img {
         width: 100%;
         height: 100%;
@@ -154,11 +163,12 @@
         padding: 0 13px 13px;
     }
 
-    actionbar a {
+    .actionbar a {
         text-decoration: none;
         font-weight: bold;
         color: #f63b99
     }
+
     .footer {
         display: grid;
         place-items: center;
@@ -166,13 +176,20 @@
         width: 100%;
         color: white;
     }
+
     .footer img {
         height: 20px;
     }
-    .fab
-    { position: absolute;
-    top: 20px;
-    left: 20px;
+
+    .footer a {
+        text-decoration: none;
+        color: #f63b99;
+    }
+
+    .fab {
+        position: absolute;
+        top: 20px;
+        left: 20px;
     }
 </style>
 <script>

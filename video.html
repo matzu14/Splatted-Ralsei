@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        body {
+            min-height: 100vh;
+            max-height: fit-content;
+            background: linear-gradient(0deg, #00223f 0%, #002E57 100%);
+            font-family: 'Roboto', sans-serif;
+            color: #e9f2fa;
+        }
+
+        .wrapper {
+            display: grid;
+            max-width: 90vw;
+            margin: 20px auto;
+        }
+
+        .wrapper a {
+            text-decoration: none;
+            color: #e9f2fa;
+        }
+
+        .content {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        video {
+            width: 75%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .fab {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrapper">
+        <section class="content">
+            <a href="https://www.youtube.com/watch?v=I5cFBi02O34" target="_blank">
+                <h1>The legend of Pipi</h1>
+            </a>
+            <video src="https://static1.e621.net/data/3f/b0/3fb034fabfa3d735d5a4d7bf20ad7d26.webm" controls
+                preload="auto"></video>
+        </section>
+    </main>
+    <div class="fab">
+        <a href="index.html"><svg style="width:40px;height:40px" viewBox="0 0 24 24">
+                <path fill="#e9f2fa"
+                    d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12M15.4,16.6L10.8,12L15.4,7.4L14,6L8,12L14,18L15.4,16.6Z" />
+            </svg></a>
+    </div>
+</body>
+
+</html>
