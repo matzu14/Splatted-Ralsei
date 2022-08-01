@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://e621.net/favicon.ico" type="image/x-icon">
+    <title> Desafio 2 </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="https://e621.net" target="_blank">e621</a>
+                <a href="https://e621.net/session/new" target="_blank">Sign in</a>
+                <a href="https://e621.net/posts" target="_blank">Posts</a>
+                <a href="https://e621.net/comments" target="_blank">Comments</a>
+                <a href="https://e621.net/artists" target="_blank">Artists</a>
+                <a href="https://e621.net/tags" target="_blank">Tags</a>
+            </nav>
+        </header>
+        <main class="content">
+            <section class="sidebar">
+                <div class="sidebarItem">1</div>
+                <div class="sidebarItem">2</div>
+                <div class="sidebarItem">3</div>
+                <div class="sidebarItem">4</div>
+                <div class="sidebarItem">5</div>
+            </section>
+            <section class="posts"></section>
+        </main>
+        <footer>
+            <nav>
+                <p>Running e621</p>
+                <ul>
+                    <li><a href="https://e621.net/static/theme" target="_blank">Themes / Gestures</a></li>
+                    <li><a href="https://e621.net/static/terms_of_service" target="_blank">Rules</a></li>
+                    <li><a href="https://e621.net/static/takedown" target="_blank">takedowns</a></li>
+                    <li><a href="https://e621.net/static/privacy" target="_blank">privacy</a></li>
+                    <li><a href="https://e621.net/static/contact" target="_blank">Contact</a></li>
+                    <li><a href="https://e621.net/static/keyboard_shortcuts" target="_blank">keyboard Shortcuts</a></li>
+                    <li><a href="https://youtu.be/G6F8shb7Tgk?t=13" target="_blank">Enable mobile mode support</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', 'sans-serif';
+        font-weight: bold;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        background: url(https://e621.net/packs/static/bbf4af533456131bea3c.png);
+        background-color: #020f23;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .container {
+        width: 98vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        background: #020f23;
+        border-radius: 0 0 .5rem .5rem;
+    }
+
+    header a:nth-child(2) {
+        color: #e00
+    }
+
+    header a:nth-child(2):hover {
+        color: #e00
+    }
+
+    header a {
+        color: #b4c7d9;
+        display: inline-block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    header a:hover {
+        color: #e9f2fa;
+    }
+
+    header img {
+        display: none;
+        /* #ed5d1f */
+        }
+
+    .content {
+        background: url(https://e621.net/packs/static/b4fc28b5d7c3eb96e7b0.png);
+        background-color: #152f56;
+        background-repeat: repeat-x;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(16, minmax(100px, 1fr));
+    }
+    .sidebar {
+        grid-column: 1/4;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        padding: 1.5rem 0 1.5rem;
+        background-color: #152f56;
+        border-radius: .5rem .5rem 0 0;
+        margin-top: auto;
+    }
+
+
+
+    footer a {
+        color: #b4c7d9;
+    }
+
+    footer p,
+    ul,
+    li {
+        align-content: center;
+        display: inline-block;
+        list-style: none;
+        margin-left: 1rem;
+        padding-left: 1rem;
+        color: #b4c7d9;
+    }
+
+    footer ul>li:before {
+        display: inline-block;
+        content: "-";
+        width: 1em;
+        margin-left: -1em;
+        color: #b4c7d9;
+    }
+
+    footer a:hover {
+        color: #e9f2fa;
+    }
+
+    footer ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer p {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<!-- <script type="text/javascript">
+    document.onreadystatechange = function () {//window.addEventListener('readystatechange',function(){...}); (for Netscape) and window.attachEvent('onreadystatechange',function(){...}); (for IE and Opera) also work
+        if (document.readyState == 'loaded' || document.readyState == 'complete')
+            alert('MUCHO CUIDADO, los enlaces del header son funcionales y llevan al sitio oficial en una nueva pestaña');
+    }
+</script> -->
