@@ -26,6 +26,12 @@
         <a href="video.html">
             <div class="panel">Test video tag</div>
         </a>
+        <a href="ResponsiveImg.html">
+            <div class="panel">Cambio de imagen dependiendo del ViewPort</div>
+        </a>
+        <a href="https://youtu.be/I-M_7FN5-xU" target="_blank">
+            <div class="panel">THE WORLD REVOLVING pero sin la melodia principal</div>
+        </a>
         <footer class="footer">Contenido WIP</footer>
     </div>
 </body>
@@ -55,6 +61,7 @@
     .wrapper {
         display: grid;
         max-width: 80vw;
+        min-height: 100vh;
         margin: 0 auto;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -78,7 +85,9 @@
         flex: 0 1 100%;
         grid-column: 1 / -1;
     }
-
+    .footer {
+        margin-top: auto;
+    }
     .wrapper>* {
         background-color: #444;
         color: #fff;
