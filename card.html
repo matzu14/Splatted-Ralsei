@@ -298,8 +298,6 @@
                 tags = "ralsei+order%3Afavcount+rating:s&limit=30";
                 tag = 'Ralsei'
         }
-        console.log(tags)
-        console.log(url + tags)
         fetch(url + tags)
             .then(response => response.json())
             .then(data => {
@@ -307,12 +305,14 @@
                 let dataArray = [data.posts]
                 Object.keys(data.posts).forEach((result) => {
                     // create card element
+                    let id = 'https://e621.net/posts/';
                     const img = data.posts[result].sample.url;
                     const desc = data.posts[result].description;
                     const artist = data.posts[result].tags.artist;
                     const char = data.posts[result].tags.character;
+                    id += data.posts[result].id;
                     const card = document.createElement('section');
-                    const preview = data.posts[result].preview.url
+                    const preview = data.posts[result].preview.url;
                     card.classList = 'card';
 
                     const content = `
@@ -327,9 +327,9 @@
                 </div>
             </div>
             <div class="content">
-                <div class="contentInner">
+                <a href="${id}" class="contentInner" target='_blank'>
                     <img src="${img}" alt="">
-                </div>
+                </a>
             </div>
 
             <p>${desc}</p>
