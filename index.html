@@ -16,38 +16,43 @@
 
 <body>
     <main class="wrapper">
-        <header class="header">Mi pequeña aventura en el mundo del desarrollo web
+        <header class="header">Mi pequeña aventura en el mundo del
+            <span class="colorText">desarrollo web</span>
             <picture><img
                     src="https://preview.redd.it/j7lkd5d5c9591.png?width=1300&format=png&auto=webp&s=57318da9a0fd90c6ba3e97dea69523e77d4ee39f"
                     alt="ralsei" height="20vh"></picture>
         </header>
 
-        <a href="splatted-ralsei.html">
+        <a class="element" href="splatted-ralsei.html">
             <span class="panel">Dibujo con css</span>
         </a>
-        <a href="card.html">
+        <a class="element" href="card.html">
             <span class="panel">Demo card simple</span>
         </a>
 
-        <a href="video.html">
+        <a class="element" href="video.html">
             <span class="panel">Test video tag</span>
         </a>
-        <a href="ResponsiveImg.html">
+        <a class="element" href="ResponsiveImg.html">
             <span class="panel">Cambio de imagen dependiendo del ViewPort</span>
         </a>
         <!-- <a href="https://youtu.be/I-M_7FN5-xU" target="_blank">
             <div class="panel">THE WORLD REVOLVING pero sin la melodia principal</div>
         </a> -->
-        <a href="e621Challange.html">
+        <a class="element" href="e621Challange.html">
             <span class="panel">Reto e621</span>
         </a>
-        <a href="twitter.html">
+        <a class="element" href="twitter.html">
             <span panel="panel">Reto twitter</span>
         </a>
-        <a href="https://matzu14.github.io/gyst/" target="_blank">
+        <a class="element" href="https://matzu14.github.io/gyst/" target="_blank">
             <span panel="panel">Get your shit together™</span>
         </a>
-        <footer class="footer">Contenido WIP</footer>
+        <footer class="footer">
+            <a class="footer-anchor" href="https://github.com/matzu14/">Work in progress</a>
+            <img class="footer-img" src="https://static1.e621.net/data/b4/bb/b4bb26f5eeba7b6481458e117fed8ad5.gif"
+                alt="">
+        </footer>
     </main>
 </body>
 
@@ -76,12 +81,35 @@
         background: linear-gradient(0deg, #4d2c62 10%, #f63b99);
     }
 
+    .colorText {
+        color: transparent;
+        background:
+            repeating-linear-gradient(90deg, seagreen, springgreen, seagreen);
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: greenAnimation 2s linear infinite;
+        background-size: 250% 250%;
+    }
+
+    @keyframes greenAnimation {
+        0% {
+            background-position: 0%;
+        }
+
+        50% {
+            background-position: 50% 50%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+
     .wrapper {
         display: grid;
         max-width: 80vw;
         min-height: 100vh;
         margin: 0 auto;
-        grid-gap: 10px;
+        grid-gap: 15px;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-auto-rows: minmax(150px, auto);
     }
@@ -105,6 +133,10 @@
 
     .footer {
         margin-top: auto;
+        display: flex;
+        max-height: fit-content;
+        justify-content: center;
+        align-items: center;
     }
 
     .wrapper>* {
@@ -114,17 +146,54 @@
         padding: 20px;
         font-size: 150%;
         margin-bottom: 10px;
-
     }
 
-    a:hover {
+    .element:hover {
         background-color: #f63b9952;
         color: #fff;
         box-shadow: inset 17px 17px 34px #f63b9952,
             inset -17px -17px 34px #4d2c6270;
+        transform: scale(1.1);
     }
 
-    a {
+    .element {
         text-decoration: none;
+        transition: transform, background-color .2s;
+    }
+
+    .footer-anchor {
+        text-decoration: none;
+        color: transparent;
+        background:
+            repeating-linear-gradient(90deg,
+                rgba(255, 0, 0, 1) 12.5%,
+                rgba(255, 102, 0, 1) 26%,
+                rgba(255, 244, 0, 1) 37.5%,
+                rgba(48, 255, 0, 1) 50%,
+                rgba(0, 65, 255, 1) 62.5%,
+                rgba(76, 0, 255, 1) 75%,
+                rgba(217, 0, 254, 1) 87.5%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: rainbowAnimation 4s linear infinite;
+        background-size: 250% 250%;
+    }
+
+    @keyframes rainbowAnimation {
+        0% {
+            background-position: 0%;
+        }
+
+        50% {
+            background-position: 100%;
+        }
+
+        100% {
+            background-position: 0%;
+        }
+    }
+
+    .footer-img {
+        height: 100px;
     }
 </style>
