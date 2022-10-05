@@ -88,6 +88,7 @@
         display: grid;
         place-items: center;
     }
+
     .header1 {
         display: grid;
         justify-content: center;
@@ -98,23 +99,27 @@
         background-image: url(https://e621.net/packs/static/bbf4af533456131bea3c.png);
         animation: loadingAnimation 15s linear infinite;
     }
+
     @keyframes loadingAnimation {
         0% {
             background-position: -100% -100%;
         }
+
         50% {
             background-position: 0% 0%;
         }
+
         100% {
             background-position: 100% 100%;
         }
     }
-    
-    .header1>header{
+
+    .header1>header {
         font-size: 40px;
         color: #ffffff;
         font-weight: bold;
     }
+
     .container {
         margin-top: 10px;
         display: grid;
@@ -195,6 +200,8 @@
     }
 
     .card-footer {
+        padding-top: 5px;
+        min-height: 10px;
         display: flex;
         justify-content: space-between;
     }
@@ -283,16 +290,16 @@
                 tag = 'Renamon'
                 break;
             case 3:
-                tags = "loona_(helluva_boss)+order%3Afavcount+rating:s&limit=30";
-                tag = 'Loona'
+                tags = "rolo_stuff+order%3Afavcount+rating:s&limit=30";
+                tag = 'Rolo stuff'
                 break;
             case 4:
                 tags = "skeleion+order%3Afavcount+-rating:e&limit=30";
                 tag = 'Skeleion'
                 break;
             case 5:
-                tags = "rolo_stuff+order%3Afavcount+rating:s&limit=30";
-                tag = 'Rolo stuff'
+                tags = "loona_(helluva_boss)+order%3Afavcount+rating:s&limit=30";
+                tag = 'Loona'
                 break;
             case 6:
                 tags = "ralsei+order%3Afavcount+rating:s&limit=30";
@@ -310,10 +317,12 @@
                     const desc = data.posts[result].description;
                     const artist = data.posts[result].tags.artist;
                     const char = data.posts[result].tags.character;
+                    const source = data.posts[result].sources[0];
                     id += data.posts[result].id;
                     const card = document.createElement('section');
                     const preview = data.posts[result].preview.url;
                     card.classList = 'card';
+                    console.log(source)
 
                     const content = `
                     <section class="card" id="card">
@@ -327,7 +336,7 @@
                 </div>
             </div>
             <div class="content">
-                <a href="${id}" class="contentInner" target='_blank'>
+                <a href="${source}" class="contentInner" target='_blank'>
                     <img src="${img}" alt="">
                 </a>
             </div>
